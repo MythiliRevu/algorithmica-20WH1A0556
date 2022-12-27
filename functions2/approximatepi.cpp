@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-double approximatePi(float m,float pi,float n,float si){
+double approximatePi(float m){
+	float n=2,pi=3,si=1;
 	int i;
 	for(i=0; i<m; i++){
     pi=pi+(si*(4/((n)*(n + 1)*(n + 2))));
@@ -10,9 +11,8 @@ double approximatePi(float m,float pi,float n,float si){
     return pi;
 }
 int main(){
-	float n=2,pi=3,si=1;
 	float m;
 	cout<<"Enter m term: ";
 	cin>>m;
-	cout<<"pi="<<approximatePi(m,pi,n,si);
+	cout<<"pi="<<approximatePi(m);
 }
